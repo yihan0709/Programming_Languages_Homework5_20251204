@@ -1,12 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void stringReverse(const char *s) {
-    if (*s == '\0')
-        return;
-
-    stringReverse(s + 1);
-    putchar(*s);
-}
+void stringReverse(const char *s);
 
 int main() {
     char input[100];
@@ -19,3 +14,12 @@ int main() {
 
     return 0;
 }
+
+void stringReverse(const char *s) {
+    if (*s == '\0')
+        return;
+
+    stringReverse(s + 1);
+    putchar(*s);
+}
+
